@@ -1,15 +1,12 @@
 import Logements from '../../logements.json'
 import { useParams } from 'react-router-dom'
-import CollapseLogement from '../../components/CollapseLogement';
+//import CollapseLogement from '../../components/CollapseLogement';
 import Slideshow from '../../components/Slideshow';
 import InfosLogement from '../../components/InfosLogement';
+import Collapse from '../../components/Collapse';
 
 function monLogement (Logements, logementId) {
-    for (let logement of Logements) {
-        if (logement.id===logementId) {     
-            return logement
-        }
-    }
+    return Logements.find(logement => logement.id === logementId)
 }
   
 function Logement(){
@@ -22,9 +19,15 @@ function Logement(){
                     <InfosLogement title={leLogementchoisi.title} location={leLogementchoisi.location} tags={leLogementchoisi.tags} 
                         name={leLogementchoisi.host.name} picture={leLogementchoisi.host.picture}/>
                     <div className='main-collapses'>
-                        <CollapseLogement text={leLogementchoisi.description} titre={'Description'}/>
-                        <CollapseLogement text={leLogementchoisi.equipements} titre={'Equipements'}/>
-                    </div>   
+                        <Collapse description={leLogementchoisi.description} title={'Description'}>
+                            <p>{leLogementchoisi.description}</p>
+                        </Collapse>
+                        <Collapse text={leLogementchoisi.equipements} title={'Equipements'}>
+                            <ul></ul>
+                        </Collapse>
+                    </div>  
+
+
         </main>
                     
     )
@@ -39,4 +42,10 @@ export default Logement
                             <div className="main-equipements">
                                 ...
                             </div>
+
+                            for (let logement of Logements) {
+        if (logement.id===logementId) {     
+            return logement
+        }
+    }
 */

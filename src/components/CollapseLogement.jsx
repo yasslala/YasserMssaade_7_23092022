@@ -1,4 +1,4 @@
-import '../styles/CollapseLogement.css'
+/*import '../styles/CollapseLogement.css'
 import { useState } from 'react'
 
 function CollapseLogement({text, titre}) {
@@ -26,4 +26,4 @@ function CollapseLogement({text, titre}) {
     )
 }
 
-export default CollapseLogement
+export default CollapseLogement*/
