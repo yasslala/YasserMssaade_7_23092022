@@ -3,6 +3,7 @@ import Logements from '../logements.json'
 import { Link } from 'react-router-dom'
 
 function Card() {
+
     return(
         <div className='card-all'>
             {Logements.map((logement) => {

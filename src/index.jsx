@@ -14,24 +14,28 @@ import reportWebVitals from './reportWebVitals'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
+
+      <Router>
+        
+    <div className="page">
       <Header />
-      <Switch>
-        <Route exact path='/'>
-          <Home />
-        </Route>
-        <Route path='/apropos'>
-          <Apropos />
-        </Route>
-        <Route path='/logement/:logementId'>
-          <Logement />
-        </Route>
-        <Route>
-          <Error />
-        </Route>
-      </Switch>
+        <Switch>
+          <Route exact path='/'>
+            <Home />
+          </Route>
+          <Route path='/apropos'>
+            <Apropos />
+          </Route>
+          <Route path='/logement/:logementId'>
+            <Logement />
+          </Route>
+          <Route>
+            <Error />
+          </Route>
+        </Switch>
+      </div>
       <Footer />
-    </Router>
+      </Router>
   </React.StrictMode>
 );
 

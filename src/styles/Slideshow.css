@@ -1,0 +1,13 @@
+.slideshow-content{
+    width: 90%;
+    height: 400px;
+    margin: auto;
+    border-radius: 15px;
+}
+.slideshow-photo{
+    margin: auto;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+}

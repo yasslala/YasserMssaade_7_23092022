@@ -1,61 +1,42 @@
-//import Logements from '../../logements.json'
+import Logements from '../../logements.json'
+import { useParams } from 'react-router-dom'
+import CollapseLogement from '../../components/CollapseLogement';
+import Slideshow from '../../components/Slideshow';
+import InfosLogement from '../../components/InfosLogement';
 
-function Logement() {
-    
+function monLogement (Logements, logementId) {
+    for (let logement of Logements) {
+        if (logement.id===logementId) {     
+            return logement
+        }
+    }
+}
+  
+function Logement(){
+    let {logementId} = useParams();
+    const leLogementchoisi = monLogement(Logements, logementId);
 
     return(
-        
-            
-                    <main className='main'>
-                        <img src="" alt="" />
-                        <div className="main-informations">
-                            <div className="main-localisation">
-                                <h2 className="main-title">
-                                    
-                                </h2>
-                                <p className="main-city"></p>
-                                <div className="main-tags">
-                                    <div className="main-tag">
-
-                                    </div>
-                                    <div className="main-tag">
-                                        
-                                    </div>
-                                    <div className="main-tag">
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="main-commentaires">
-                                <div className="main-profil">
-                                    <h3 className="main-name">
-
-                                    </h3>
-                                    <div className="main-photo">
-
-                                    </div>
-                                </div>
-                                <div className="main-stars"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div className="main-description">
-                                ...
-                            </div>
-                            <div className="main-equipements">
-                                ...
-                            </div>
-                        </div>
-                    </main>
-             
-        
+        <main className='main'>
+                    <Slideshow photo={leLogementchoisi.cover} />
+                    <InfosLogement title={leLogementchoisi.title} location={leLogementchoisi.location} tags={leLogementchoisi.tags} 
+                        name={leLogementchoisi.host.name} picture={leLogementchoisi.host.picture}/>
+                    <div className='main-collapses'>
+                        <CollapseLogement text={leLogementchoisi.description} titre={'Description'}/>
+                        <CollapseLogement text={leLogementchoisi.equipements} titre={'Equipements'}/>
+                    </div>   
+        </main>
+                    
     )
 }
 
 export default Logement
 
-/*{Logements.map((logement) => {
-    return(   )
-})
-}
+/*
+<div className="main-description">
+                                ...
+                            </div> 
+                            <div className="main-equipements">
+                                ...
+                            </div>
 */

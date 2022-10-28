@@ -4,8 +4,9 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
+    margin-top: auto;
 }
+
 .footer-text{
     padding-bottom: 10px;
 }
