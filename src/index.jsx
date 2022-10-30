@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './styles/index.css'
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Home from './pages/Home'
 import Apropos from './pages/Apropos'
 import Logement from './pages/Logement'
@@ -19,21 +19,13 @@ root.render(
         
     <div className="page">
       <Header />
-        <Switch>
-          <Route exact path='/'>
-            <Home />
-          </Route>
-          <Route path='/apropos'>
-            <Apropos />
-          </Route>
-          <Route path='/logement/:logementId'>
-            <Logement />
-          </Route>
-          <Route>
-            <Error />
-          </Route>
-        </Switch>
-      </div>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/apropos' element={<Apropos />} />
+          <Route path='/logement/:logementId' element={<Logement />} />           
+          <Route path='*' element={<Error/> } />                
+        </Routes>
+    </div>
       <Footer />
       </Router>
   </React.StrictMode>

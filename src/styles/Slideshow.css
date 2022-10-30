@@ -2,12 +2,26 @@
     width: 90%;
     height: 400px;
     margin: auto;
-    border-radius: 15px;
+    border-radius: 25px;
 }
 .slideshow-photo{
+    position: absolute;
     margin: auto;
-    width: 100%;
-    height: 400px;
+    width: 90%;
+    height: 415px;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 25px;
+}
+.fa-angle-left{
+    position: absolute;
+    font-size: 80px;
+    color: white;
+    top: 340px;
+}
+.fa-angle-right{
+    position: absolute;
+    font-size: 80px;
+    color: white;
+    top: 340px;
+    right: 5%;
 }

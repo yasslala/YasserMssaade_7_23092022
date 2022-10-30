@@ -15,16 +15,20 @@ function Logement(){
 
     return(
         <main className='main'>
-                    <Slideshow photo={leLogementchoisi.cover} />
-                    <InfosLogement title={leLogementchoisi.title} location={leLogementchoisi.location} tags={leLogementchoisi.tags} 
-                        name={leLogementchoisi.host.name} picture={leLogementchoisi.host.picture}/>
+                    <Slideshow photos={leLogementchoisi.pictures} />
+                    <InfosLogement 
+                        title={leLogementchoisi.title} 
+                        location={leLogementchoisi.location} 
+                        tags={leLogementchoisi.tags} 
+                        name={leLogementchoisi.host.name} 
+                        picture={leLogementchoisi.host.picture}/>
                     <div className='main-collapses'>
-                        <Collapse description={leLogementchoisi.description} title={'Description'}>
-                            <p>{leLogementchoisi.description}</p>
-                        </Collapse>
-                        <Collapse text={leLogementchoisi.equipements} title={'Equipements'}>
-                            <ul></ul>
-                        </Collapse>
+                        <Collapse description={leLogementchoisi.description} title={'Description'}/>            
+                        <Collapse title={'Equipements'}
+                            description={leLogementchoisi.equipments.map((equipement) => (
+                            <div>{equipement}</div>
+                        ))}/>
+                        
                     </div>  
 
 
@@ -48,4 +52,14 @@ export default Logement
             return logement
         }
     }
+
+
+
+
+        
+                                {leLogementchoisi.equipments.map((data, index) =>(
+                                    <p>{data[index]}</p>
+                                ))}
+                            
+                        </Collapse> 
 */
