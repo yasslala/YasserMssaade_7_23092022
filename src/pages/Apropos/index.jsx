@@ -29,6 +29,7 @@ function Apropos() {
     return(
         <div className='apropos'>
             <Banner picture={banner_aboutus} />
+            <div className='apropos-collapse'>
                 {AproposData.map((data) =>(
                     <Collapse 
                         key={data.id}
@@ -36,6 +37,7 @@ function Apropos() {
                         description={data.description}
                     />
                 ))}
+            </div>
         </div>
     )
 }

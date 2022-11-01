@@ -26,8 +26,8 @@
 .card-title{
     position: absolute;
     color: white;
-    top: 470px;
-    right: 300px;
+    bottom: 10px;
+    left: 5%;
     width: 200px;
     font-size: 20px;
 }

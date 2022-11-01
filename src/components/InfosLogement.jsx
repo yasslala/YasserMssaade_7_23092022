@@ -1,7 +1,18 @@
 import '../styles/InfosLogement.css'
 
-function InfosLogement({title, location, tags, name, picture}) {
+function InfosLogement({title, location, tags, name, picture, rating}) {
+    const ratingMax = 5;
+    const coloredStars = rating;
+    const uncoloredStars = ratingMax - coloredStars
+    let starsArray = []
 
+    for(let i=0; i<coloredStars; i++){
+        starsArray.push(<i className="fa-solid fa-star" style={{color: '#FF6060'}}></i>)
+    }
+    for(let i=0; i<uncoloredStars; i++){
+        starsArray.push(<i className="fa-solid fa-star" style={{color: 'gainsboro'}}></i>)
+    }
+ 
     return(
         <div className="main-informations">
             <div className="main-localisation">
@@ -25,11 +36,7 @@ function InfosLogement({title, location, tags, name, picture}) {
                     <img src={picture} alt='' className="main-photo"/>
                 </div>
                 <div className="main-stars">
-                    <i className="fa-solid fa-star" ></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
+                    {starsArray}
                 </div>
             </div>
         </div>

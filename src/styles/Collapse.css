@@ -1,14 +1,10 @@
 .collapse{
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 70%;
     margin-bottom: 30px;
+    width: 100%;
 }
 .collapse-withicon{
     background-color: #FF6060;
-    height: 35px;
+    height: 52px;
     width: 100%;
     color: white;
     border-radius: 10px;
@@ -23,13 +19,11 @@
 .collapse-icon{
     margin-right: 15px;
 }
-.collapse-card{
-    width: 100%;
-}
 .collapse-background{
     background-color: #F6F6F6;
     margin-top: 0;
-    height: 200px;
+    height: 100%;
+    padding-bottom: 30px;
     margin-bottom: 20px;
 }
 .collapse-descrption{
@@ -38,4 +32,10 @@
     padding-right: 20px;
     margin-top: 0;
     padding-top: 20px;
+}
+.fa-angle-down{
+    font-size: 25px;
+}
+.fa-angle-up{
+    font-size: 25px;
 }
