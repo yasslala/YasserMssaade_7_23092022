@@ -16,7 +16,7 @@ function Collapse({title, description}) {
                 <div onClick={activeFalse} className='collapse-icon'>{active ? <i className="fa-solid fa-angle-up"></i> : <i className="fa-solid fa-angle-down"></i>}</div>
             </div>
             { active && <div className='collapse-background'>
-                     <p className='collapse-descrption'>{description}</p>
+                     <div className='collapse-descrption'>{description}</div>
             </div>
             }
                 

@@ -16,3 +16,14 @@ header{
     margin-left: 30px;
     font-size: 20px;
 }
+
+@media all and (max-width: 600px){
+    .header-logo{
+        width: 120px;
+        height: 40px;
+    }
+    .header-link{
+        font-size: 12px;
+        font-weight: bold;
+    }
+}

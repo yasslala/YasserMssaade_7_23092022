@@ -39,3 +39,25 @@
 .fa-angle-up{
     font-size: 25px;
 }
+
+@media all and (max-width: 600px){
+    .collapse-withicon{
+        height: 30px;
+        border-radius: 5px;
+    }
+    .collapse-title{
+        font-size: 13px;
+    }
+    .collapse-background{
+       padding-bottom: 0;
+    }
+    .collapse-descrption{
+        font-size: 12px;
+    }
+    .fa-angle-down{
+        font-size: 15px;
+    }
+    .fa-angle-up{
+        font-size: 15px;
+    }
+}

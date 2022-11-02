@@ -17,24 +17,33 @@ function Logement(){
        <> { leLogementchoisi ? (
 
         <main className='main'>
-                    <Slideshow photos={leLogementchoisi.pictures} />
-                    <InfosLogement 
+                    <Slideshow 
+                        key={leLogementchoisi.pictures}
+                        photos={leLogementchoisi.pictures} />
+                    <InfosLogement
+                        key={leLogementchoisi.title}
                         title={leLogementchoisi.title} 
                         location={leLogementchoisi.location} 
                         tags={leLogementchoisi.tags} 
                         name={leLogementchoisi.host.name} 
                         picture={leLogementchoisi.host.picture}
-                        rating={leLogementchoisi.rating}/>
+                        rating={leLogementchoisi.rating}
+                        id={leLogementchoisi.id}/>
                     <div className='main-collapses-logement'>  
 
                         <div className='main-collapse-logement'>
-                            <Collapse description={leLogementchoisi.description} title={'Description'}/>
+                            <Collapse 
+                                key={leLogementchoisi.description}
+                                description={leLogementchoisi.description}
+                                title={'Description'}/>
                         </div> 
                          
                         <div className='main-collapse-logement'>
-                            <Collapse title={'Equipements'}
-                                description={leLogementchoisi.equipments.map((equipement) => (
-                                    <div>{equipement}</div>
+                            <Collapse
+                                key={leLogementchoisi.equipments}
+                                title={'Equipements'}
+                                description={leLogementchoisi.equipments.map((equipement, index) => (
+                                <div key={`${leLogementchoisi.equipments}-${index}`}>{equipement}</div>
                                 ))}/>  
                         </div>                                               
                     </div>  
@@ -46,4 +55,5 @@ function Logement(){
 }
 
 export default Logement
+
 

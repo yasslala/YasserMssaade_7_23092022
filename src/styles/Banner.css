@@ -16,9 +16,19 @@
 }
 .banner-text{
     position: absolute;
-    top: 30%;
+    top: 80px;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 40px;
     color: white;
+}
+
+@media all and (max-width: 600px){
+    .banner-contenant{
+        height: 111px;
+    }
+    .banner-text{
+        font-size: 24px;
+        top: 35px;
+    }
 }

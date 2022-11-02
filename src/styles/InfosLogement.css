@@ -22,6 +22,7 @@
 }
 .main-tags{
     display: flex;
+    flex-wrap: wrap; 
 }
 .main-tag{
     color: white;
@@ -30,6 +31,7 @@
     border-radius: 10px;
     padding: 3px 25px 2px 25px;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 .main-commentaires{
     display: flex;
@@ -52,4 +54,36 @@
 .main-stars{
     font-size: 30px;
     margin-top: 10px;
+}
+
+@media all and (max-width: 600px){
+    .main-informations{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-title{
+        font-size: 18px;
+    }
+    .main-city{
+        font-size: 14px;
+    }
+    .main-tag{
+        font-size: 10px;
+        border-radius: 5px;
+    }
+    .main-commentaires{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .main-name{
+        font-size: 14px;
+    }
+    .main-photo{
+        height: 45px;
+        width: 45px;
+    }
+    .main-stars{
+        font-size: 20px;
+    }
 }

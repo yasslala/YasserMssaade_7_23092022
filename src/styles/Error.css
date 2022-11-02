@@ -24,3 +24,12 @@
     margin-bottom: 100px;
     color: #FF6060;
 }
+
+@media all and (max-width: 600px){
+    .error-title{
+        font-size: 100px;
+    }
+    .error-message{
+        font-size: 18px;
+    }
+}
