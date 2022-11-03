@@ -25,7 +25,7 @@
     color: #FF6060;
 }
 
-@media all and (max-width: 600px){
+@media all and (max-width: 800px){
     .error-title{
         font-size: 100px;
     }

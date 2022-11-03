@@ -5,12 +5,14 @@ function InfosLogement({title, location, tags, name, picture, rating, id}) {
     const coloredStars = rating;
     const uncoloredStars = ratingMax - coloredStars
     let starsArray = []
-
+    
     for(let i=0; i<coloredStars; i++){
-        starsArray.push(<i className="fa-solid fa-star" style={{color: '#FF6060'}}></i>)
+        let keyValue = i+1
+        starsArray.push(<i key={keyValue} className="fa-solid fa-star" style={{color: '#FF6060'}}></i>)
     }
     for(let i=0; i<uncoloredStars; i++){
-        starsArray.push(<i className="fa-solid fa-star" style={{color: 'gainsboro'}}></i>)
+        let keyValue = i+5
+        starsArray.push(<i key={keyValue} className="fa-solid fa-star" style={{color: 'gainsboro'}}></i>)
     }
 
     return(

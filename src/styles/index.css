@@ -31,3 +31,16 @@ body {
     width: 70%;
     margin: auto;
 }
+
+@media all and (max-width: 800px){
+    .main-collapses-logement{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-collapse-logement{
+        width: 100%;
+    }
+    .apropos-collapse{
+        width: 90%;
+    }
+}

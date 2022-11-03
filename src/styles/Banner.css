@@ -23,7 +23,7 @@
     color: white;
 }
 
-@media all and (max-width: 600px){
+@media all and (max-width: 800px){
     .banner-contenant{
         height: 111px;
     }

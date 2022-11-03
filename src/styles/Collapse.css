@@ -25,6 +25,7 @@
     height: 100%;
     padding-bottom: 30px;
     margin-bottom: 20px;
+    border-radius: 0 0 10px 10px;
 }
 .collapse-descrption{
     color: #FF6060;
@@ -40,9 +41,9 @@
     font-size: 25px;
 }
 
-@media all and (max-width: 600px){
+@media all and (max-width: 800px){
     .collapse-withicon{
-        height: 30px;
+        height: 35px;
         border-radius: 5px;
     }
     .collapse-title{
