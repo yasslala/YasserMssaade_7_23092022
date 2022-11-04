@@ -26,17 +26,20 @@ function Slideshow({ photos }) {
 
   return (
     <div className="slideshow-content">
-      <div className="slideshow-photoo">
+      
         <img src={photos[index]} alt="" className="slideshow-photo" />
         {allPhotos > 1 && (
-          <div>
+          <div className="slideshow-angles">
             <i onClick={prev} className="fa-solid fa-angle-left"></i>
             <i onClick={next} className="fa-solid fa-angle-right"></i>
           </div>
         )}
-      </div>
+      
     </div>
   );
 }
 
 export default Slideshow;
+
+/*<div className="slideshow-photoo"></div>
+</div>*/

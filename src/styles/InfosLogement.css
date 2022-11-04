@@ -7,6 +7,7 @@
     flex-direction: row;
     justify-content: space-between;
     color: #FF6060;
+    max-width: 1440px;
 }
 .main-localisation{
     width: 70%;
