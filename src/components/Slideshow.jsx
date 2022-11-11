@@ -1,12 +1,8 @@
 import "../styles/Slideshow.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function Slideshow({ photos }) {
   const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    setIndex(0);
-  }, []);
 
   const next = () => {
     if (index === photos.length - 1) {

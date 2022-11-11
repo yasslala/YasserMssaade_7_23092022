@@ -14,7 +14,7 @@ function Card() {
           >
             <img
               src={logement.cover}
-              alt={logement.cover}
+              alt={logement.title}
               className="card-image"
             />
             <h3 className="card-title">{logement.title}</h3>
